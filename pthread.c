@@ -95,7 +95,7 @@ int main(int argc,char* argv[])
     printf("Hello from the main thread!\n");
 
     for(thread=0 ; thread<thread_count ; thread++){
-        pthread_join(&thread_handles[thread],NULL);
+        pthread_join(thread_handles[thread],NULL);
     }
 
     free(thread_handles);
